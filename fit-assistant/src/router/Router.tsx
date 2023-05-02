@@ -10,7 +10,7 @@ function AppRouter() {
     <BrowserRouter>
       <div className={"sidebar"}>
         <h2>Fit Assistant</h2>
-        <NavLink to={"/"}>Home</NavLink>
+        <NavLink to={"/"}>Home<img src="../assets/green-house.png" alt=""/></NavLink>
         <NavLink to={"/exercises"}>Exercises</NavLink>
         <NavLink to={"programs"}>Programs</NavLink>
         <NavLink to={"/account"}>Account</NavLink>
