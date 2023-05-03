@@ -5,20 +5,21 @@
   flex-direction: column;
   background-color: #f2f2ef;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
-.sidebar a{
+.sidebar a {
   color: var(--main-color);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  margin : 1em 0;
+  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-
-
-.sidebar:hover
-{
+.sidebar:hover {
   width: 20%;
   height: 100vh;
   display: flex;
@@ -27,16 +28,19 @@
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
-.sidebar:hover a:not(.active){
+.sidebar:not(:hover) a p {
+  display: none;
+}
+
+.sidebar:hover a:not(.active) {
   color: var(--main-color);
   text-decoration: none;
-  margin: 1em;
+  margin: 0.25em;
   font-size: 1.5rem;
   transition: all 0.3s ease-in-out;
 }
 
-.sidebar h2
-{
+.sidebar h2 {
   opacity: 0;
 }
 
@@ -52,18 +56,39 @@
   font-weight: bolder;
 }
 
-.sidebar:hover .active
-{
+.sidebar:hover .active {
   background-color: var(--main-color);
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
   padding: 1rem;
-  margin: 1em;
+  margin: 0;
   font-size: 1.5rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
+.sidebar .active svg {
+  padding: 0.5rem;
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+.sidebar .active:nth-child(2n + 1) svg,
+.sidebar .active:nth-child(2n) svg circle {
+  fill: white;
+}
+
+.sidebar .active:nth-child(2n) svg path {
+  stroke: white;
+}
+
+.sidebar a:nth-child(2n + 1) svg,
+.sidebar a:nth-child(2n) svg circle {
+  fill: var(--main-color);
+}
+
+.sidebar a:nth-child(2n) svg path {
+  stroke: var(--main-color);
+}
 @keyframes navbar {
   0% {
     opacity: 0;
@@ -74,4 +99,3 @@
     transform: translateX(0%);
   }
 }
-  
