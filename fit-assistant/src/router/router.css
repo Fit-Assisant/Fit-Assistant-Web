@@ -19,58 +19,26 @@
   justify-content: space-evenly;
 }
 
-.sidebar:hover {
-  width: 20%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #f2f2ef;
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
-}
-
-.sidebar:not(:hover) a p {
-  display: none;
-}
-
-.sidebar:hover a:not(.active) {
-  color: var(--main-color);
-  text-decoration: none;
-  margin: 0.25em;
-  font-size: 1.5rem;
-  transition: all 0.3s ease-in-out;
+.sidebar a p
+{
+  display : none;
 }
 
 .sidebar h2 {
   opacity: 0;
 }
 
-.sidebar:hover h2 {
-  animation: navbar 0.5s ease-in-out forwards;
-  background-color: var(--main-color);
-  font-size: 2rem;
-  color: #fff;
-  text-align: center;
-  padding-bottom: 4vh;
-  padding-top: 4vh;
-  margin: 0;
-  font-weight: bolder;
-}
-
-.sidebar:hover .active {
-  background-color: var(--main-color);
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  padding: 1rem;
-  margin: 0;
-  font-size: 1.5rem;
-  transition: all 1s ease-in-out;
+.sidebar:not(.active) svg {
+  border-radius: 50%;
+  /* stroke: var(--main-color); */
+  transition: all 0.3s ease-in-out;
 }
 
 .sidebar .active svg {
   padding: 0.5rem;
   background-color: var(--main-color);
   border-radius: 50%;
+  transition: all 0.3s ease-in-out;
 }
 .sidebar .active:nth-child(2n + 1) svg,
 .sidebar .active:nth-child(2n) svg circle {
