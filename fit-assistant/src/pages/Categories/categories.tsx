@@ -1,21 +1,17 @@
 import { useEffect, useState } from "react";
-import "./exercises.css";
-import { useParams } from "react-router-dom";
+import "./categories.css";
+import Category from "../../components/Category/category";
 
-function Exercises() {
-  const { id } = useParams();
+function Categories() {
   const [data, setData] = useState<
     {
       id: number;
       name: string;
-      description: string;
-      image: string;
-      machine: number;
     }[]
   >([]);
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/exercises/${id}`)
+    fetch(`http://localhost:8080/api/categories`)
       .then((response) => response.json())
       .then((data) => {
         setData(data);
@@ -25,10 +21,14 @@ function Exercises() {
   }, []);
   console.log("data" + data);
   return (
-    <div className={"exercises"}>
-      <h1>Exercises</h1>
+    <div className={"categories"}>
+      <h1>Categories</h1>
+      {data !== null &&
+        data.map((category) => (
+          <Category id={category.id} name={category.name} />
+        ))}
     </div>
   );
 }
 
-export default Exercises;
+export default Categories;

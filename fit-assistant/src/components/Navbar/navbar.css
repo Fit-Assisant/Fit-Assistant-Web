@@ -1,0 +1,68 @@
+.sidebar {
+  width: 6vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2ef;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.8s ease-in-out;
+}
+
+.sidebar a {
+  color: var(--main-color);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sidebar a p {
+  display: none;
+}
+
+.sidebar h2 {
+  opacity: 0;
+}
+
+.sidebar:not(.active) svg {
+  border-radius: 50%;
+  /* stroke: var(--main-color); */
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar .active svg {
+  padding: 0.5rem;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar .active:nth-child(2n + 1) svg,
+.sidebar .active:nth-child(2n) svg circle {
+  fill: white;
+}
+
+.sidebar .active:nth-child(2n) svg path {
+  stroke: white;
+}
+
+.sidebar a:nth-child(2n + 1) svg,
+.sidebar a:nth-child(2n) svg circle {
+  fill: var(--main-color);
+}
+
+.sidebar a:nth-child(2n) svg path {
+  stroke: var(--main-color);
+}
+@keyframes navbar {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
