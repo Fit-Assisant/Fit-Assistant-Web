@@ -39,23 +39,31 @@
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
-.sidebar .active:nth-child(2n + 1) svg,
-.sidebar .active:nth-child(2n) svg circle {
-  fill: white;
-}
 
-.sidebar .active:nth-child(2n) svg path {
+.sidebar .active:nth-child(2) svg path,
+.sidebar .active:nth-child(5) svg path {
   stroke: white;
 }
 
-.sidebar a:nth-child(2n + 1) svg,
-.sidebar a:nth-child(2n) svg circle {
+.sidebar .active:nth-child(5) svg circle,
+.sidebar .active:nth-child(4) svg g,
+.sidebar .active:nth-child(3) svg g,
+.sidebar .active:nth-child(6) svg {
+  fill: white;
+}
+
+.sidebar a:nth-child(2) svg path,
+.sidebar a:nth-child(5) svg path {
+  stroke: var(--main-color);
+}
+
+.sidebar a:nth-child(5) svg circle,
+.sidebar a:nth-child(4) svg g,
+.sidebar a:nth-child(3) svg g,
+.sidebar a:nth-child(6) svg {
   fill: var(--main-color);
 }
 
-.sidebar a:nth-child(2n) svg path {
-  stroke: var(--main-color);
-}
 @keyframes navbar {
   0% {
     opacity: 0;
