@@ -1,3 +1,4 @@
+/* General */
 .exercise-header {
   display: flex;
   align-items: end;
@@ -18,32 +19,7 @@
   width: 100%;
   padding-top: 5vh;
 }
-.exercise-description-column {
-  width: 30%;
-}
 
-.exercise-description-column .trained-muscles {
-  background-color: var(--main-color);
-  padding: 1em;
-  border-radius: 1em;
-  margin: 1em;
-}
-
-.exercise-description-column .trained-muscles * {
-  color: white;
-}
-.exercise-description-middle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 70%;
-  margin: 0 2vw;
-}
-
-.exercise-description-middle p {
-  text-align: justify;
-}
 .exercise-description,
 .exercise-header {
   width: 90vw;
@@ -82,8 +58,69 @@
   text-align: center;
 }
 
+/* Description Section*/
+
+/* Middle part of the description section */
+.exercise-description-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: 0 2vw;
+}
+
+.exercise-description-middle p {
+  text-align: justify;
+}
+
+.exercise-description-middle p,
+.exercise-description-middle li {
+  font-size: 1.5rem;
+}
+
+/* Column part of the description section */
+.exercise-description-column {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.exercise-description-column .section-column {
+  position: relative;
+  background-color: var(--main-color);
+  padding: 1em;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+.exercise-description-column .picto-column {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: 1em solid var(--main-color);
+  fill: var(--main-color);
+  stroke: white;
+  background-color: var(--main-color);
+}
+
+.exercise-description-column .picto-column path {
+  stroke: white;
+}
+.exercise-description-column .section-column .content {
+  margin-top: 5em;
+}
+
+.exercise-description-column .section-column * {
+  color: white;
+}
+
 .trained-muscles ul {
-  margin-left: 25%;
+  margin-left: 20%;
 }
 .trained-muscles li {
   font-size: 1.25rem;
