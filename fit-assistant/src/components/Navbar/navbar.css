@@ -1,15 +1,15 @@
 .sidebar {
-  width: 6vw;
-  height: 100vh;
+  width: 80px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f2f2ef;
+  background-color: var(--main-color);
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.8s ease-in-out;
 }
 
 .sidebar a {
-  color: var(--main-color);
+  color: #f2f2ef;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   margin: 1em 0;
@@ -35,33 +35,33 @@
 
 .sidebar .active svg {
   padding: 0.5rem;
-  background-color: var(--main-color);
+  background-color: white;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
 
 .sidebar .active:nth-child(2) svg path,
 .sidebar .active:nth-child(5) svg path {
-  stroke: white;
+  stroke: var(--main-color);
 }
 
 .sidebar .active:nth-child(5) svg circle,
 .sidebar .active:nth-child(4) svg g,
 .sidebar .active:nth-child(3) svg g,
 .sidebar .active:nth-child(6) svg {
-  fill: white;
+  fill: var(--main-color);
 }
 
 .sidebar a:nth-child(2) svg path,
 .sidebar a:nth-child(5) svg path {
-  stroke: var(--main-color);
+  stroke: white;
 }
 
 .sidebar a:nth-child(5) svg circle,
 .sidebar a:nth-child(4) svg g,
 .sidebar a:nth-child(3) svg g,
 .sidebar a:nth-child(6) svg {
-  fill: var(--main-color);
+  fill: white;
 }
 
 @keyframes navbar {

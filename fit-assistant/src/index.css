@@ -4,7 +4,7 @@ body {
   font-family: Metropolis, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--main-color);
+  background-color: #06493133;
 }
 
 code {
@@ -16,14 +16,13 @@ code {
   --main-color: #064931;
 }
 
-h1{
+h1 {
   font-weight: 700;
   background-color: white;
   color: var(--main-color);
   padding: 2rem;
   text-align: center;
-  margin-top : 3rem;
+  margin-top: 3rem;
   border-radius: 2rem;
   border: var(--main-color) 3px solid;
 }
-

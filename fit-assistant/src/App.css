@@ -45,6 +45,6 @@
 #root > div:nth-child(2) {
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: calc(100vw - 80px);
   align-items: center;
 }
