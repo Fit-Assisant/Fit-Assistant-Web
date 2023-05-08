@@ -1,0 +1,45 @@
+.horizontal-scrollable-list .list-item {
+  height: 90%;
+  min-width: 17vw;
+  background-color: #06493125;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 32px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.horizontal-scrollable-list .list-item h3 {
+  font-size: 3em;
+  margin: 1vh auto;
+  color: var(--main-color);
+}
+.horizontal-scrollable-list::-webkit-scrollbar {
+  display: none;
+}
+.horizontal-scrollable-list .list-item .list-item-content-exercises {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  margin-bottom: 1vh;
+}
+.horizontal-scrollable-list .list-item .list-item-content-exercises p {
+  margin: 0;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.768);
+  font-size: 2em;
+}
+
+.horizontal-scrollable-list .list-item .list-item-content-exercises svg {
+  fill: rgba(0, 0, 0, 0.768);
+}
+.horizontal-scrollable-list .list-item .list-item-content-separator {
+  border: 2px solid var(--main-color);
+}
+
+.horizontal-scrollable-list .list-item .list-item-content-categories {
+  color: rgba(0, 0, 0, 0.768);
+}
