@@ -1,0 +1,13 @@
+.exercises-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  width: 80%;
+}
+
+.exercises {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

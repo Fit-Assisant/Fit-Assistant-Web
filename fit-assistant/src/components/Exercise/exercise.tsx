@@ -1,6 +1,7 @@
 import React from "react";
 import "./exercise.css";
 import { Link } from "react-router-dom";
+import ShoulderSVG from "../Svg/shoulder";
 
 interface CategoryProps {
   id: number;
@@ -10,7 +11,10 @@ function Category(props: CategoryProps) {
   return (
     <Link to={`/exercises/${props.id}`}>
       <div className="exercise">
-        <h2>{props.name}</h2>
+        <div className="exercise-content">
+          <ShoulderSVG />
+          <h3>{props.name}</h3>
+        </div>
       </div>
     </Link>
   );

@@ -1,0 +1,24 @@
+.exercise-content {
+  position: relative;
+  padding-top: 40px;
+  border: 1px solid green;
+  height: calc(20vh - 40px);
+  background-color: white;
+  border-radius: 15px;
+}
+
+.exercise {
+  border: 1px solid red;
+  padding-top: 40px;
+  height: 20vh;
+}
+
+.exercise-content svg {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  left: 20px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
