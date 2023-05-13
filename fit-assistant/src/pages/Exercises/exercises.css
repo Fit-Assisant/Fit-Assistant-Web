@@ -2,7 +2,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
+  padding: 1vh 5%;
   width: 80%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .exercises {
@@ -10,4 +13,60 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.exercises-filter {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.exercises-filter input {
+  color: var(--main-color);
+  border: 3px solid var(--main-color);
+  outline: var(--main-color);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.exercises-filter select {
+  color: var(--main-color);
+  border: 3px solid var(--main-color);
+  outline: var(--main-color);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.exercises-filter select option:hover {
+  background-color: var(--main-color) !important;
+  color: white;
+}
+
+.exercises-filter select option:checked {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.exercises-filter select option {
+  background-color: white;
+  color: var(--main-color);
+}
+
+/* Styles pour la barre de défilement */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+/* Styles pour la poignée (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+
+/* Styles pour la poignée (thumb) au survol */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--main-color);
 }

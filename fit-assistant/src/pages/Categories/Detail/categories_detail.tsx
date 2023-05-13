@@ -33,9 +33,6 @@ function Category() {
   return (
     <div className={"categories"}>
       <h1>{category?.name}</h1>
-      {category?.exercises?.map((exercise) => (
-        <Exercise id={exercise.id} name={exercise.name} />
-      ))}
     </div>
   );
 }

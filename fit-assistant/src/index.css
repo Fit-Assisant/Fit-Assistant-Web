@@ -13,8 +13,11 @@ code {
 }
 
 :root {
-  --main-color: #064931;
+  /*064931*/
+  /*0e4a9f*/
+  --main-color: #0e4a9f;
   --background-color: #f5f6fa;
+  --text-color: rgb(103, 103, 103);
 }
 
 h1 {

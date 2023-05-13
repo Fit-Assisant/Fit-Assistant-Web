@@ -1,19 +1,78 @@
-.exercise-content {
+.exercise-composant .exercise-content {
   position: relative;
   padding-top: 40px;
-  border: 1px solid green;
   height: calc(20vh - 40px);
   background-color: white;
   border-radius: 15px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
-.exercise {
-  border: 1px solid red;
+.exercise-content-section {
+  flex-grow: 1;
+  height: 33.3%;
+}
+
+.exercise-composant .exercise-content .exercise-content-section:last-child {
+  display: flex;
+  flex-direction: row;
+}
+
+.exercise-composant .exercise-content .exercise-content-section:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20%;
+  align-items: start;
+}
+
+.exercise-composant .exercise-content .exercise-content-section:nth-child(3) p {
+  color: rgb(103, 103, 103);
+  font-size: 1rem;
+  margin-top: 1px;
+}
+
+.exercise-composant .exercise-content .exercise-content-section div {
+  width: 50%;
+}
+
+.exercise-composant .exercise-content .exercise-content-section div h4 {
+  margin: 0;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.exercise-composant .exercise-content .exercise-content-section div p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.exercise-composant .exercise-content .exercise-content-section svg {
+  width: 20px;
+  height: 20px;
+}
+
+.exercise-composant .exercise-content .exercise-content-section svg path {
+  stroke: var(--text-color);
+}
+.exercise-composant {
+  /* border: 1px solid red; */
   padding-top: 40px;
   height: 20vh;
+  transition-duration: 0.75s;
 }
 
-.exercise-content svg {
+.exercise-composant:hover {
+  transform: scale(1.05);
+  transition-duration: 0.75s;
+}
+
+.exercises a {
+  text-decoration: none;
+}
+
+.exercise-composant .exercise-content > svg {
   position: absolute;
   width: 80px;
   height: 80px;
@@ -21,4 +80,11 @@
   left: 20px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
+}
+
+.exercise-composant .exercise-content h3 {
+  text-decoration: none;
+  color: var(--main-color);
+  text-align: left;
+  margin: 5% 0 0 10%;
 }
