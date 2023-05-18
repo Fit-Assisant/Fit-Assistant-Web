@@ -37,21 +37,21 @@
   color: var(--main-color);
 }
 
-.login-container form input {
+.login-container form label input {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid var(--main-color);
 }
 
-.login-container form input:focus {
+.login-container form label input:focus {
   outline: none;
 }
 
-.login-container form input::placeholder {
+.login-container form label input::placeholder {
   color: var(--main-color);
 }
 
-.login-container form button[type="submit"] {
+.login-container form label button[type="submit"] {
   background-color: var(--main-color);
   border: none;
   border-radius: 15px;

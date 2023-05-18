@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./account.css";
 import Record from "../../components/Account/Record/record";
 import Training from "../../components/Account/Training/training";
+import Login from "./Login/login";
 
 interface Account {
   id: number;
@@ -12,18 +13,7 @@ interface Account {
   age: number;
 }
 
-function Account() {
-  const [account, setAccount] = useState<Account>();
-
-  useEffect(() => {
-    fetch(`http://localhost:8080/api/user/2`)
-      .then((response) => response.json())
-      .then((data) => {
-        setAccount(data);
-        console.log(data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+function AccountPage({ account }: { account: Account | undefined }) {
   return (
     <div className={"account"}>
       <div className="account-middle">
@@ -97,6 +87,24 @@ function Account() {
         </div>
       </div>
     </div>
+  );
+}
+function Account() {
+  const [account, setAccount] = useState<Account>();
+
+  useEffect(() => {
+    fetch(`http://localhost:8080/api/user/2`)
+      .then((response) => response.json())
+      .then((data) => {
+        setAccount(data);
+        console.log(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+  return sessionStorage.getItem("LoggedIn") === "true" ? (
+    <AccountPage account={account} />
+  ) : (
+    <Login />
   );
 }
 

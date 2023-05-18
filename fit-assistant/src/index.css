@@ -21,14 +21,14 @@ code {
 }
 
 h1 {
-  font-weight: 700;
-  background-color: white;
+  font-size: 3rem;
+  padding: 0;
+  border: none;
+  text-align: left;
+  width: 80%;
   color: var(--main-color);
-  padding: 2rem;
-  text-align: center;
   margin-top: 3rem;
-  border-radius: 2rem;
-  border: var(--main-color) 3px solid;
+  margin-bottom: 1rem;
 }
 
 .App {
