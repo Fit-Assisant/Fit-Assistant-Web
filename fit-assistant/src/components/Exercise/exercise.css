@@ -88,3 +88,7 @@
   text-align: left;
   margin: 5% 0 0 10%;
 }
+
+a {
+  text-decoration: none;
+}

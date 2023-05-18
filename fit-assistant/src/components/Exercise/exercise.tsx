@@ -41,16 +41,18 @@ function Category(props: CategoryProps) {
             <TargetSVG />
             <p>{props.muscles}</p>
           </div>
-          <div className="exercise-content-section">
-            <div>
-              <h4>Last Session</h4>
-              <p>17/07/97</p>
+          {sessionStorage.getItem("LoggedIn") === "true" && (
+            <div className="exercise-content-section">
+              <div>
+                <h4>Last Session</h4>
+                <p>17/07/97</p>
+              </div>
+              <div>
+                <h4>Record</h4>
+                <p>180kg</p>
+              </div>
             </div>
-            <div>
-              <h4>Record</h4>
-              <p>180kg</p>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </Link>

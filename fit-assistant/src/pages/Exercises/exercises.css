@@ -1,3 +1,10 @@
+.exercises {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .exercises-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -6,13 +13,6 @@
   width: 80%;
   overflow-y: scroll;
   overflow-x: hidden;
-}
-
-.exercises {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .exercises-filter {
