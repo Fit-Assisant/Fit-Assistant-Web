@@ -3,6 +3,8 @@ import "./account.css";
 import Record from "../../components/Account/Record/record";
 import Training from "../../components/Account/Training/training";
 import Connexion from "./Connexion/connexion";
+import AccountSVG from "../../components/Svg/account";
+import ProfileSVG from "../../components/Svg/profile";
 
 interface Account {
   id: number;
@@ -15,7 +17,19 @@ interface Account {
 
 function AccountPage({ account }: { account: Account | undefined }) {
   return (
-    <h1>Account</h1>
+    <div className="account">
+      <div className="account-right">
+        <h1>My Dashboard</h1>
+        <div className="account-user">
+          <ProfileSVG />
+          <p className="title">Welcome back.</p>
+          <p className="info">
+            {account?.firstname} {account?.lastname[0]}.
+          </p>
+        </div>
+      </div>
+      <div className="account-middle"></div>
+    </div>
     // <div className={"account"}>
     //   <div className="account-middle">
     //     <div className="account-middle-top">
