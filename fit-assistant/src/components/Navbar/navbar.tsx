@@ -13,6 +13,7 @@ function Navbar() {
       <NavLink to={"/"}>
         <HomeSVG />
       </NavLink>
+
       <NavLink to={"/record"}>
         <RecordSVG />
       </NavLink>
