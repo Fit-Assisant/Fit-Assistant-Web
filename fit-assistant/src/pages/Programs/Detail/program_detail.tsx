@@ -57,7 +57,6 @@ function Program() {
       })
       .catch((error) => console.log(error));
   }, []);
-  console.log(data);
   return (
     <div className="program">
       <h1>{data?.name}</h1>

@@ -47,14 +47,12 @@ interface Category {
 }
 
 function Program(props: ProgramProps) {
-  // console.log(props);
   const categories = Array<Category>();
   props.exercises.map((serie) => {
     if (!categories.includes(serie.details.category)) {
       categories.push(serie.details.category);
     }
   });
-  console.log(categories);
   return (
     <Link to={`/programs/${props.id}`}>
       <div className="program-composant">

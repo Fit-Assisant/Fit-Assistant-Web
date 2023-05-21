@@ -29,7 +29,6 @@ function Exercises() {
       .then((response) => response.json())
       .then((data) => {
         setExercise(data);
-        console.log(data);
       })
       .catch((error) => console.log(error));
   }, [id]);

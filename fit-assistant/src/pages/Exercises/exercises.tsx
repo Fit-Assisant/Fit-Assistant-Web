@@ -33,7 +33,6 @@ function Exercises() {
     fetch(`http://localhost:8080/api/exercises`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setData(data);
       })
       .catch((error) => console.log(error));

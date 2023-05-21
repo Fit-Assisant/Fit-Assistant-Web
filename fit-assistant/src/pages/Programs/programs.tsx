@@ -48,7 +48,6 @@ function Programs() {
       })
       .catch((error) => console.log(error));
   }, []);
-  console.log(data);
   return (
     <div className="programs">
       <h1>Programs</h1>
