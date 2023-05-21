@@ -63,7 +63,6 @@ function Connexion() {
           "Content-Type": "application/json",
         },
       }).then((response) => {
-        console.log(response);
         if (response.status == 201) {
           sessionStorage.setItem("LoggedIn", true.toString());
           sessionStorage.setItem("email", email);
@@ -83,7 +82,6 @@ function Connexion() {
       },
     })
       .then((response) => {
-        console.log(response);
         if (response.status == 200) {
           sessionStorage.setItem("LoggedIn", true.toString());
           sessionStorage.setItem("email", email);
