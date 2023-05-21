@@ -10,20 +10,21 @@ function Navbar() {
   return (
     <nav className={"sidebar"}>
       <h2>Fit Assistant</h2>
-      <NavLink to={"/"}>
+      <NavLink to={"/"} className="home-svg">
         <HomeSVG />
       </NavLink>
-
-      <NavLink to={"/record"}>
-        <RecordSVG />
-      </NavLink>
-      <NavLink to={"/exercises"}>
+      {sessionStorage.getItem("LoggedIn") === "true" && (
+        <NavLink to={"/session"} className="session-svg">
+          <RecordSVG />
+        </NavLink>
+      )}
+      <NavLink to={"/exercises"} className="exercise-svg">
         <ExercisesSVG />
       </NavLink>
-      <NavLink to={"programs"}>
+      <NavLink to={"programs"} className="program-svg">
         <ProgramSVG />
       </NavLink>
-      <NavLink to={"/account"}>
+      <NavLink to={"/account"} className="account-svg">
         <AccountSVG />
       </NavLink>
     </nav>
