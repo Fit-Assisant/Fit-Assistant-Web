@@ -5,10 +5,9 @@ import Exercise from "../pages/Exercises/Detail/exercises_detail";
 import Programs from "../pages/Programs/programs";
 import Program from "../pages/Programs/Detail/program_detail";
 import Account from "../pages/Account/account";
-// import Register from "../pages/Account/Register/register";
 import Navbar from "../components/Navbar/navbar";
+import Session from "../pages/Session/session";
 import "./router.css";
-import Connexion from "../pages/Account/Connexion/connexion";
 
 function AppRouter() {
   return (
@@ -22,6 +21,7 @@ function AppRouter() {
           <Route path={"/programs"} element={<Programs />} />
           <Route path={"/programs/:id"} element={<Program />} />
           <Route path={"/account"} element={<Account />} />
+          <Route path={"/session"} element={<Session />} />
           {/* <Route path={"*"} element={<h1>404</h1>} /> */}
         </Routes>
       </div>
