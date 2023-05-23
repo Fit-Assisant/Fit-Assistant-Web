@@ -122,7 +122,7 @@ function Session() {
         <div className="session-exercises">
           <h2>Exercises</h2>
           <div className="session-exercises-search">
-            <input
+            <input className={"exercise-search-bar"}
               type="text"
               placeholder="Search exercises"
               value={filter}
@@ -165,10 +165,10 @@ function Session() {
                 <div>
                   <label htmlFor={`reps-${exercise.id}`}>Reps</label>
                   <div>
-                    <button
-                      onClick={() => updateReps(exercise.id, exercise.reps + 1)}
+                    <button className={"remove-button"}
+                      onClick={() => updateReps(exercise.id, exercise.reps == 0 ? exercise.reps : exercise.reps - 1)}
                     >
-                      +
+                      -
                     </button>
                     <input
                       type="number"
@@ -182,20 +182,20 @@ function Session() {
                       }}
                     />
 
-                    <button
-                      onClick={() => updateReps(exercise.id, exercise.reps - 1)}
+                    <button className={"add-button"}
+                      onClick={() => updateReps(exercise.id, exercise.reps + 1)}
                     >
-                      -
+                      +
                     </button>
                   </div>
                 </div>
                 <div>
                   <label htmlFor={`sets-${exercise.id}`}>Sets</label>
                   <div>
-                    <button
-                      onClick={() => updateSets(exercise.id, exercise.sets + 1)}
+                    <button className={"remove-button"}
+                      onClick={() => updateSets(exercise.id, exercise.sets == 0 ? exercise.sets : exercise.sets - 1)}
                     >
-                      +
+                      -
                     </button>
                     <input
                       type="number"
@@ -209,22 +209,22 @@ function Session() {
                       }}
                     />
 
-                    <button
-                      onClick={() => updateSets(exercise.id, exercise.sets - 1)}
+                    <button className={"add-button"}
+                      onClick={() => updateSets(exercise.id, exercise.sets + 1)}
                     >
-                      -
+                      +
                     </button>
                   </div>
                 </div>
                 <div>
                   <label htmlFor={`duration-${exercise.id}`}>Duration</label>
                   <div>
-                    <button
+                    <button className={"remove-button"}
                       onClick={() =>
-                        updateDuration(exercise.id, exercise.duration + 1)
+                        updateDuration(exercise.id, exercise.duration == 0 ? exercise.duration : exercise.duration - 1)
                       }
                     >
-                      +
+                      -
                     </button>
                     <input
                       type="number"
@@ -238,24 +238,24 @@ function Session() {
                       }}
                     />
 
-                    <button
+                    <button className={"add-button"}
                       onClick={() =>
-                        updateDuration(exercise.id, exercise.duration - 1)
+                        updateDuration(exercise.id, exercise.duration + 1)
                       }
                     >
-                      -
+                      +
                     </button>
                   </div>
                 </div>
                 <div>
                   <label htmlFor={`weight-${exercise.id}`}>Weight</label>
                   <div>
-                    <button
+                    <button className={"remove-button"}
                       onClick={() =>
-                        updateWeight(exercise.id, exercise.weight + 1)
+                        updateWeight(exercise.id, exercise.weight == 0 ? exercise.weight : exercise.weight - 1)
                       }
                     >
-                      +
+                      -
                     </button>
                     <input
                       type="number"
@@ -269,24 +269,24 @@ function Session() {
                       }}
                     />
 
-                    <button
+                    <button className={"add-button"}
                       onClick={() =>
-                        updateWeight(exercise.id, exercise.weight - 1)
+                        updateWeight(exercise.id, exercise.weight + 1)
                       }
                     >
-                      -
+                      +
                     </button>
                   </div>
                 </div>
                 <div>
                   <label htmlFor={`intensity-${exercise.id}`}>Intensity</label>
                   <div>
-                    <button
+                    <button className={"remove-button"}
                       onClick={() =>
-                        updateIntensity(exercise.id, exercise.intensity + 1)
+                        updateIntensity(exercise.id, exercise.intensity == 0 ? exercise.intensity : exercise.intensity - 1)
                       }
                     >
-                      +
+                      -
                     </button>
                     <input
                       type="number"
@@ -300,12 +300,12 @@ function Session() {
                       }}
                     />
 
-                    <button
+                    <button className={"add-button"}
                       onClick={() =>
-                        updateIntensity(exercise.id, exercise.intensity - 1)
+                        updateIntensity(exercise.id, exercise.intensity + 1)
                       }
                     >
-                      -
+                      +
                     </button>
                   </div>
                 </div>

@@ -195,3 +195,43 @@
   scale: 1.1;
   transition-duration: 0.2s;
 }
+
+.add-button:hover, .remove-button:hover
+{
+    scale: 1.1;
+    transition-duration: 0.2s;
+}
+
+.add-button:hover {
+  background-color: green;
+}
+
+.remove-button:hover {
+  background-color: red;
+}
+
+.add-button, .remove-button
+{
+  scale: 1;
+  transition-duration: 0.2s;
+}
+
+.exercise-search-bar
+{
+  padding: 1rem;
+  outline: none;
+  border: var(--text-color) 3px solid;
+  border-radius: 1rem;
+  text-align: center;
+  width: 35%;
+  color: var(--main-color);
+  font-size : 1.5rem;
+  transition : all 0.2s ease;
+}
+
+.exercise-search-bar:focus, .exercise-search-bar:hover
+{
+  width : 50%;
+  border: var(--main-color) 3px solid;
+  transition : all 0.2s ease;
+}
