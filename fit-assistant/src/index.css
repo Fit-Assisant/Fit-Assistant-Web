@@ -6,7 +6,7 @@ body {
   font-family: Metropolis, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--main-color);
+  background-color: white;
 }
 
 code {
@@ -34,7 +34,6 @@ h1 {
 }
 
 .App {
-  background-color: var(--background-color);
-  box-shadow: -6px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 32px 0 0 32px;
+  background-color: #dfe6f8;
+  border-radius: 20px 0 0 20px;
 }

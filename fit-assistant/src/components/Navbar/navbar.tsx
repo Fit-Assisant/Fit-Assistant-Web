@@ -9,7 +9,6 @@ import AccountSVG from "../Svg/account";
 function Navbar() {
   return (
     <nav className={"sidebar"}>
-      <h2>Fit Assistant</h2>
       <NavLink to={"/"} className="home-svg">
         <HomeSVG />
       </NavLink>
