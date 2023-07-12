@@ -82,10 +82,16 @@ function Connexion() {
       },
     })
       .then((response) => {
+        console.log(response);
         if (response.status == 200) {
-          sessionStorage.setItem("LoggedIn", true.toString());
-          sessionStorage.setItem("email", email);
-          window.location.href = "/"; // Rediriger vers le dashboard
+          response.json().then((data) => {
+            sessionStorage.setItem("LoggedIn", true.toString());
+            sessionStorage.setItem("firstname", data.firstname);
+            sessionStorage.setItem("lastname", data.lastname);
+            sessionStorage.setItem("username", data.username);
+            sessionStorage.setItem("email", data.email);
+            window.location.href = "/"; // Rediriger vers le dashboard
+          });
         }
       })
       .catch((error) => console.log(error));
