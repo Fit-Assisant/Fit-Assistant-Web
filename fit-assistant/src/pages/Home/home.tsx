@@ -1,20 +1,45 @@
 import "./home.css";
+import GymAddictSVG from "../../components/Svg/gym-addict";
 
 function Home() {
   return (
-    <div className={"home"}>
+    <div className="home">
+      <input className="searchbar" type="text" placeholder="🔍 Search" />
+      {sessionStorage.getItem("LoggedIn") === "true" && (
+        <div className="personnal-content">
+          <div className="content">
+            <p className="bold">
+              Hello,{" "}
+              <b className="name">{sessionStorage.getItem("firstname")}</b>
+              👋
+            </p>
+            <p>Have a nice day and don't forget to be strong !</p>
+          </div>
+          <GymAddictSVG />
+        </div>
+      )}
       <h1>Home</h1>
-      <div className="text-wrapper">
-        <p> Welcome on Fit Assistant AKA your best workout tracker friend.</p>
-        <p>
-          On this website, you'll have access to all our workout exercises and
-          programs. We are here to help you not to be lost in your gym the first
-          time.
-        </p>
-        <p>
-          Not only for the beginners, you will have the possibilities to save
-          all your PR (Personnal Records) to see your progression curve.
-        </p>
+      <div className="content">
+        <div className="content-wrapper">
+          <div className="content-box">
+            <p>Coming Soon ...</p>
+          </div>
+          <div className="content-box">
+            <p>Coming Soon ...</p>
+          </div>
+          <div className="content-box">
+            <p>Coming Soon ...</p>
+          </div>
+          <div className="content-box">
+            <p>Coming Soon ...</p>
+          </div>
+          <div className="content-box">
+            <p>Coming Soon ...</p>
+          </div>
+          <div className="content-box">
+            <p>Coming Soon ...</p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,19 +1,81 @@
-.text-wrapper
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 2rem;
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
 }
 
-p
-{
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 1rem;
+.home > * {
+  margin-left: 2em;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 4em);
+  height: 70%;
+}
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.content-box {
+  background-color: white;
+  border-radius: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 1em;
+}
+.personnal-content {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  width: 70%;
+  margin-top: 5vh;
+
+  padding: 0 3%;
+}
+
+.personnal-content .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.personnal-content svg {
+  width: 30%;
+}
+
+.searchbar {
+  border-radius: 1em;
+  font-size: 16px;
+  border: none;
+  padding: 1em 1em;
+  margin: 1em 0 1em 2em;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  outline: none;
+  text-align: start;
+}
+
+.personnal-content .bold {
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0;
+}
+
+.personnal-content .bold .name {
+  color: var(--main-color);
+}
