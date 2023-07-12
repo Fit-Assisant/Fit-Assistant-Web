@@ -43,7 +43,8 @@ function AccountPage({ account }: { account: Account | undefined }) {
           <ProfileSVG />
           <p className="title">Welcome back.</p>
           <p className="info">
-            {account?.firstname} {account?.lastname[0]}.
+            {sessionStorage.getItem("firstname")}{" "}
+            {sessionStorage.getItem("lastname")?.slice(0, 1)}.
           </p>
         </div>
         <div className="account-button">
