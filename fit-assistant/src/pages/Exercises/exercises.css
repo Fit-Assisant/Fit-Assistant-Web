@@ -18,6 +18,7 @@
 .exercises-filter {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 80%;
   margin-bottom: 1rem;
   gap: 1rem;
@@ -25,13 +26,40 @@
 
 .exercises-filter input {
   color: var(--main-color);
-  border: 3px solid var(--main-color);
-  outline: var(--main-color);
-  border-radius: 5px;
-  padding: 0.5rem;
+  border-radius: 1em;
+  font-size: 16px;
+  border: none;
+  padding: 1em 1em;
+  margin: 1em 0 1em 2em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  outline: none;
+  text-align: start;
 }
 
-.exercises-filter select {
+.exercises-filter .category-button {
+  color: white;
+  background-color: var(--main-color);
+  font-weight: bold;
+  border-radius: 2em;
+  font-size: 16px;
+  border: none;
+  padding: 0.5em 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1em 0;
+}
+
+.exercises-filter .category-button svg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+/* .exercises-filter select {
   color: var(--main-color);
   border: 3px solid var(--main-color);
   outline: var(--main-color);
@@ -52,7 +80,7 @@
 .exercises-filter select option {
   background-color: white;
   color: var(--main-color);
-}
+} */
 
 /* Styles pour la barre de défilement */
 ::-webkit-scrollbar {
@@ -69,4 +97,67 @@
 /* Styles pour la poignée (thumb) au survol */
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--main-color);
+}
+
+.category-button.Arms {
+  background-color: #4c89fb82;
+}
+.category-button.Abs {
+  background-color: blue;
+}
+.category-button.Legs {
+  background-color: #c173ff;
+}
+.category-button.Chest {
+  background-color: #4ae0ea;
+}
+.category-button.Back {
+  background-color: #ff9241;
+}
+.category-button.Shoulder {
+  background-color: orange;
+}
+.category-button.Glutes {
+  background-color: pink;
+}
+.category-button.Cardio {
+  background-color: black;
+}
+
+@media screen and (max-width: 425px) {
+  .exercises-list {
+    grid-template-columns: 1fr;
+  }
+
+  .exercises-filter {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .exercises-filter-categories {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 96%;
+    padding: 0 2%;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+  }
+
+  .exercises-filter-categories::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  .exercises-filter-categories::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  .exercises-filter-categories::-webkit-scrollbar-track {
+    background: transparent;
+  }
 }
