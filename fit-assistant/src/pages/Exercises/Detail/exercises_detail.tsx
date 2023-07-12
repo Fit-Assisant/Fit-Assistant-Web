@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./exercises_detail.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ArmsSVG from "../../../components/Svg/arms";
 import IdeaSVG from "../../../components/Svg/idea";
 interface Muscle {
@@ -8,9 +8,13 @@ interface Muscle {
   name: string;
 }
 
+interface Category {
+  id: number;
+  name: string;
+}
 interface Exercise {
   id: number;
-  category: number;
+  category: Category;
   name: string;
   description: string;
   image: string;
@@ -35,43 +39,36 @@ function Exercises() {
 
   return (
     <div className={"exercise-detail"}>
-      <div className="exercise-content">
-        <div className="exercise-content-middle">
-          <h1>{exercise?.name}</h1>
-          <div className="exercise-content-description">
-            <h2>Description</h2>
-            <p>{exercise?.description}</p>
-          </div>
-          <div className="exercise-content-instructions">
-            <h2>Instructions</h2>
-            <ol>
-              {exercise?.instructions.split("\n").map((instruction) => (
-                <li>{instruction}</li>
-              ))}
-            </ol>
-          </div>
-        </div>
-        <div className="exercise-content-right">
-          <div className="exercise-content-muscles">
-            <ArmsSVG />
-            <h2>Trained Muscles</h2>
-            <ul>
-              {exercise?.muscles.map((muscle) => (
-                <li>{muscle.name}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="exercise-content-tips">
-            <IdeaSVG />
-            <h2>Tips</h2>
-            <ul>
-              {exercise?.tips.split("\n").map((tip) => (
-                <li>{tip}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      <div className={"exercise-detail-header"}>
+        <Link to={`/exercises`}>❮</Link>
+        <h1>Exercise Details</h1>
+        <div></div>
       </div>
+      <h2>{exercise?.name}</h2>
+      <div className="exercise-detail-badges">
+        <p className="badge">{exercise?.category.name}</p>
+        <p className="badge">Medium</p>
+      </div>
+      <h3>Description</h3>
+      <p>{exercise?.description}</p>
+      <h3>Instructions</h3>
+      <ol>
+        {exercise?.instructions.split("\n").map((instruction) => (
+          <li>{instruction}</li>
+        ))}
+      </ol>
+      <h3>Trained Muscles</h3>
+      <ul>
+        {exercise?.muscles.map((muscle) => (
+          <li>{muscle.name}</li>
+        ))}
+      </ul>
+      <h3>Tips</h3>
+      <ul>
+        {exercise?.tips.split("\n").map((tip) => (
+          <li>{tip}</li>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-/* 
+/* /* 
 .exercise-header {
   display: flex;
   align-items: end;
@@ -130,7 +130,6 @@ tionColumn part of the description sec .exercise-description-column {
 .trained-muscles li {
   font-size: 1.25rem;
 }
-*/
 
 .exercise-detail {
   display: flex;
@@ -241,4 +240,77 @@ tionColumn part of the description sec .exercise-description-column {
   color: white;
   font-size: 1rem;
   text-align: left;
+} */
+
+.exercise-detail-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0 5%;
+}
+
+.exercise-detail-header h1 {
+  flex-grow: 1;
+  font-size: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+  width: 70%;
+}
+
+.exercise-detail > *:not(.exercise-detail-header) {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+.exercise-detail h2 {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  text-align: left;
+}
+
+.exercise-detail h3 {
+  text-align: left;
+}
+
+.exercise-detail p {
+  text-align: justify;
+}
+
+.exercise-detail ol li,
+.exercise-detail ul li {
+  text-align: left;
+  margin-bottom: 0.75em;
+}
+
+.exercise-detail-badges {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.exercise-detail-badges .badge {
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+  background-color: #146deb;
+  border-radius: 0.2rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0;
+}
+.exercise-detail-header a {
+  height: fit-content;
+  background-color: var(--main-color);
+  color: white;
+  border: 1px solid var(--main-color);
+  border-radius: 1rem;
+  padding: 0.5rem 0.75rem;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.exercise-detail-header div {
+  width: 10%;
 }
