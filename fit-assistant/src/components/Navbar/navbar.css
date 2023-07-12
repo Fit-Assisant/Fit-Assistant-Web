@@ -1,5 +1,6 @@
 .sidebar {
   position: sticky;
+  padding-top: 5vh;
   top: 0;
   left: 0;
   width: 70px;
@@ -10,6 +11,23 @@
   transition: all 0.8s ease-in-out;
   border-radius: 20px;
   margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    margin: 0;
+    flex-direction: row;
+    padding-top: 0;
+    width: 100%;
+    max-height: fit-content;
+    min-height: fit-content;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    z-index: 100;
+    background-color: white;
+  }
 }
 
 .sidebar a {
