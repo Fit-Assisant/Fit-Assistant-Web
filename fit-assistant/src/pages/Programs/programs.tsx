@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import "./programs.css";
-import Program from "../../components/Program/program";
+import DeltoidWorkoutSVG from "../../components/Svg/deltoidWorkout";
+import { Link } from "react-router-dom";
 
 interface Programs {
   id: number;
   name: string;
-  description: string;
-  user: number;
+  difficulty: string;
   exercises: Array<Series>;
 }
 
@@ -52,14 +52,22 @@ function Programs() {
     <div className="programs">
       <h1>Programs</h1>
       {data.map((program) => (
-        <Program
-          key={program.id}
-          name={program.name}
-          id={program.id}
-          description={program.description}
-          user={program.user}
-          exercises={program.exercises}
-        />
+        <Link to={`/programs/${program.id}`}>
+          <div className="program-item">
+            <DeltoidWorkoutSVG />
+            <div className="program-item-content">
+              <h2>{program.name}</h2>
+              <div className="badges-section">
+                <p className="badge">{program.difficulty}</p>
+                {program.exercises.length == 1 ? (
+                  <p className="badge">{program.exercises.length} exercise</p>
+                ) : (
+                  <p className="badge">{program.exercises.length} exercises</p>
+                )}
+              </div>
+            </div>
+          </div>
+        </Link>
       ))}
     </div>
   );

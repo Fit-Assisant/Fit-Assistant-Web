@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
 }
 .timeline-object {
@@ -153,4 +153,50 @@
 .program-details-info p {
   text-align: justify;
   color: var(--text-color);
+} */
+
+.program {
+  min-height: calc(100vh - 80px);
+  width: 100%;
+}
+
+.program-detail-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 1rem;
+  padding: 0 5%;
+}
+
+.program-detail-header a {
+  background-color: var(--main-color);
+  color: white;
+  border: 1px solid var(--main-color);
+  border-radius: 1rem;
+  padding: 0.5rem 0.75rem;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.program-detail-header div {
+  width: 10%;
+}
+
+.program-detail-header h1 {
+  flex-grow: 1;
+  font-size: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+  width: 70%;
+}
+
+.exercise-detail > *:not(.program-detail-header) {
+  margin-left: 5vw;
+  margin-right: 5vw;
 }

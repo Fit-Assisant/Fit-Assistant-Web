@@ -1,0 +1,58 @@
+.programs {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.programs > a {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.program-item {
+  border-radius: 10px;
+  width: 90%;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.badges-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.program-item svg {
+  width: 30%;
+  height: 100%;
+  margin: 1rem;
+  object-fit: cover;
+}
+
+.program-item h2 {
+  font-size: 1.25rem;
+  color: var(--main-color);
+}
+
+.program-item .badge {
+  background-color: var(--main-color);
+  color: white;
+  width: fit-content;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+}
+.programs h1 {
+  font-size: 1.75rem;
+  width: 100%;
+  text-align: center;
+}

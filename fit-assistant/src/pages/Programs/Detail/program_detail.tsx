@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./program_detail.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import RepsSVG from "../../../components/Svg/reps";
 import Exercise from "../../../components/Exercise/exercise";
 
@@ -59,8 +59,12 @@ function Program() {
   }, []);
   return (
     <div className="program">
-      <h1>{data?.name}</h1>
-      <div className="program-details">
+      <div className={"program-detail-header"}>
+        <Link to={`/programs`}>❮</Link>
+        <h1>{data?.name}</h1>
+        <div></div>
+      </div>
+      {/* <div className="program-details">
         <div className="program-details-info">
           <h2>Description</h2>
           <p>{data?.description}</p>
@@ -128,7 +132,7 @@ function Program() {
             )
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
