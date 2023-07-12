@@ -1,12 +1,53 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+@font-face {
+  font-family: "Zona Pro";
+  font-weight: 100;
+  src: url("assets/fonts/ZonaPro-Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Zona Pro";
+  font-weight: 200;
+  src: url("assets/fonts/ZonaPro-ExtraLight.otf") format("opentype");
+}
+
+/* @font-face {
+  font-family: "Zona Pro";
+  font-weight: 300;
+  src: url("assets/fonts/ZonaPro-Light.otf") format("opentype");
+} */
+
+@font-face {
+  font-family: "Zona Pro";
+  font-weight: 400;
+  src: url("assets/fonts/ZonaPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Zona Pro";
+  font-weight: 700;
+  src: url("assets/fonts/ZonaPro-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Zona Pro";
+  font-weight: 800;
+  src: url("assets/fonts/ZonaPro-ExtraBoldDemo.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Zona Pro";
+  src: url("assets/fonts/Zona-Pro.otf") format("opentype");
+}
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Metropolis, Helvetica, sans-serif;
+  font-family: "Zona Pro", Metropolis, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
+  color: var(--text-color);
+  font-size: 16px;
 }
 
 code {
@@ -36,4 +77,10 @@ h1 {
 .App {
   background-color: #dfe6f8;
   border-radius: 20px 0 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    border-radius: 0 0 20px 20px;
+  }
 }

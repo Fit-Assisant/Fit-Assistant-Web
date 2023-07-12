@@ -48,3 +48,14 @@
   width: calc(100vw - 80px);
   align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+  #root {
+    flex-direction: column-reverse;
+  }
+
+  #root > div:nth-child(2) {
+    width: 100vw;
+    margin-bottom: 80px;
+  }
+}
